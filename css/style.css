@@ -1,0 +1,159 @@
+body {
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-areas:
+        "l l l l l l h h h h h h" 
+        "l l l l l l r r r r r r"
+        "l l l l l l r r r r r r"
+        "l l l l l l r r r r r r"
+        "l l l l l l r r r r r r"
+        "l l l l l l r r r r r r"
+        "l l l l l l r r r r r r"
+        "l l l l l l r r r r r r"
+        "l l l l l l r r r r r r"
+        "f f f f f f f f f f f f";
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    grid-area: h;
+}
+
+.leftContent{
+    grid-area:l;
+    position: relative;
+}
+
+.rightContent{
+    grid-area:r;
+}
+
+.footer{
+    grid-area:f;
+    background-color: rgb(36, 36, 36);
+}
+
+li, a, button, h1, h2{
+    font-family: "Trebuchet", sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    color:#262626;
+    text-decoration: none;
+}
+.header{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px 4%;
+}
+.logo {
+    height: 55px;
+    width: 130px;
+    position: absolute;
+    margin: 25px;
+}
+
+.navLinks {
+    list-style: none;
+    margin-left: 100px;
+}
+
+.navLinks li {
+    display: inline-block;
+    padding: 0px 25px;
+}
+
+.currentPage a{
+    color:#FFC857;
+}
+.navLinks li a {
+    transition: all 0.3s ease 0s;
+}
+
+.navLinks li a:hover {
+    color:#FFC857;
+}
+
+.header button {
+    padding: 9px 25px;
+    background-color: #FFC857;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3 ease 0s;
+    margin-left: 35px;
+}
+
+.header button:hover {
+    background-color: #1f1f1f;
+}
+
+/***Right Content Styling***/
+
+.sloganSpace{
+    margin-top: 3%;
+
+    margin-right: 20%;
+    padding-left: 80px;
+}
+
+.sloganSpace h1 {
+    font-size: 42px;
+}
+
+.sloganSpace hr{
+ width: 40%;
+ height: 0,1px;
+ margin-left: 30px;
+ background: none;
+ border-color:rgb(48, 48, 48,0.3);
+}
+
+.homepageSloganMusic{
+    margin-left: 60px;
+}
+.rightContentOptions {
+    padding-top: 5%;
+}
+
+.rightContentOptions h2 {
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.rContent{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+}
+
+.rightContentOptions button{
+    padding: 18px 45px;
+    background-color: rgba(255,255,255,0);
+    color: #333333;
+    border: 2px solid rgba(53, 53, 53, 0.5);
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3 ease 0s;
+}
+
+.rightContentOptions button:hover {
+    border: 2px solid rgba(255, 241, 119, 0.5);
+    color: #FFC857;
+}
+
+/***Footer Styling***/
+.footer{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px 4%;
+}
