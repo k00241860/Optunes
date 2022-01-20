@@ -444,3 +444,148 @@ transform: translateX(-50%);
     margin-left: auto;
 
 }
+
+/***Login Page Styling ***/
+.loginPageContainer {
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-areas:
+        "sh sh sh sh sh sh sh sh sh sh sh sh" 
+        "hs hs hs hs hs hs hs hs hs hs hs hs" 
+        "m m m m m m m m m m m m"
+        "m m m m m m m m m m m m"
+        "m m m m m m m m m m m m"
+        "m m m m m m m m m m m m"
+        "m m m m m m m m m m m m"
+        "m m m m m m m m m m m m"
+        "m m m m m m m m m m m m"
+        "m m m m m m m m m m m m"
+        "m m m m m m m m m m m m"
+        "m m m m m m m m m m m m"
+        "m m m m m m m m m m m m";
+}
+
+.loginPageContainer .mainContent{
+    grid-area: m;
+}
+
+.loginPageContainer .subHeader{
+    grid-area: hs;
+}
+
+.loginPageContainer .solidHeader{
+    grid-area: sh;
+    height:90px;
+}
+
+.loginPageContainer .mainContent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loginPageContainer .mainContent .accountDetailsWrapper {
+    height: 700px;
+    width: 1435px;
+    border-radius: 30px;
+    box-shadow: 3px 3px 10px rgb(92, 92, 92);
+    display: flex;
+    justify-content: space-around;
+}
+
+.accountDetailsWrapper .leftAccountSection {
+    height: 100%;
+    width: 100%;
+    background-image: url(../Images/accountDetailsBackground.jpg);
+    background-size: cover;
+    border-radius: 30px 0px 0px 30px;
+    text-align: center;
+}
+
+.accountDetailsWrapper .rightAccountSection {
+    height: 100%;
+    width: 100%;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+.accountTitle,
+h1{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10%;
+    font-size: 36px;
+}
+
+.accountForm input {
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+    flex-direction:column;
+    padding: 5px 60px 5px 60px;
+    border-radius: 10px;
+    border: 1px solid rgb(173, 173, 173);
+}
+
+.accountForm label {
+    font-size: 12px;
+    color:rgb(92, 92, 92);
+    margin-left: 10px;
+}
+
+.accountForm .loginBtn{
+    padding: 9px 25px;
+    background-color:#FFC857;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: all 0.3 ease 0s;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.accountForm .registerBtn {
+    padding: 9px 25px;
+    background-color:#FFC857;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: all 0.3 ease 0s;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.accountForm .backBtn:hover, .registerBtn:hover {
+    background-color: #1f1f1f;
+}
+
+.accountForm .backBtn {
+    padding: 9px 25px;
+    background-color: #313131;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: all 0.3 ease 0s;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.accountForm .loginBtn:hover {
+    background-color: #3dc776;
+}
+
+.account_Btns{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 40px;
+}
+
+.accountForm .account_Btns input{
+    padding: 10px 50px 10px 50px;
+}
