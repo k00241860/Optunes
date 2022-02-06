@@ -83,9 +83,30 @@ li, a, button, h1, h2{
     color:#FFC857;
 }
 
-.header button {
+.header .profile button {
     padding: 9px 25px;
     background-color: #FFC857;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3 ease 0s;
+}
+
+.header .unLogged-login button {
+    padding: 9px 25px;
+    background-color: #262626;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3 ease 0s;
+    margin-right: -60px;
+}
+
+.header .unLogged-register button {
+    padding: 9px 25px;
+    background-color: #262626;
     color: white;
     border: none;
     border-radius: 50px;
@@ -512,8 +533,7 @@ transform: translateX(-50%);
     align-items: center;
 }
 
-.accountTitle,
-h1{
+.accountTitle h1{
     display: flex;
     justify-content: center;
     margin-bottom: 10%;
@@ -561,7 +581,7 @@ h1{
 }
 
 .accountForm .backBtn:hover, .registerBtn:hover {
-    background-color: #1f1f1f;
+    background-color: #3dc776;;
 }
 
 .accountForm .backBtn {
