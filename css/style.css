@@ -93,7 +93,7 @@ li, a, button, h1, h2{
     transition: all 0.3 ease 0s;
 }
 
-.header .unLogged-login button {
+.unLogged-login button {
     padding: 9px 25px;
     background-color: #262626;
     color: white;
@@ -104,7 +104,7 @@ li, a, button, h1, h2{
     margin-right: -60px;
 }
 
-.header .unLogged-register button {
+.unLogged-register button {
     padding: 9px 25px;
     background-color: #262626;
     color: white;

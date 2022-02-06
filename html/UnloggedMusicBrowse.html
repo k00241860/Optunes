@@ -1,0 +1,87 @@
+<html>
+<head>
+<title>
+OPTUNES Music Page Prototype
+</title>
+
+<link rel="stylesheet" href="../css/style.css">
+<script src="https://kit.fontawesome.com/85b3032907.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<div class="musicBrowserContainer">
+        <div class="solidHeader">
+            <img class="solidNavLogo" href="../html/HomePage.html" src="../Images/OptunesLogo.png">
+        <div class="solidNavigation">
+            <ul class="solidNavLinks">
+                 <li><a href="../html/UnloggedHomePage.html">Home</a></li>
+                 <li class="currentPage"><a href="../html/UnloggedMusicBrowse.html">Music</a></li>
+                 <li><a href="#">Play List</a></li>
+                 <li><a href="#">About</a></li>
+                 
+            </ul>
+                </div>
+                <a class="unLogged-login" href="../html/LoginPage.html"><button>Login</button></a>
+                <a class="unLogged-register" href="../html/RegisterPage.html"><button>Register</button></a>
+        </div>
+        <div class="subHeader">
+            <div class="breadCrumbs">
+                <h3>BROWSE MUSIC</h3>
+                <p>home / <a class="currentPage" href="#">music</a></p>
+            </div>
+            <div class="searchBarWrap">
+                <div class="searchBox">
+                    <input type="text" class="input" placeholder="Search...">
+                    <div class="btn btn_common">
+                        <i class="fas fa-search"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+         <div class="leftMenu">
+             <div class="leftMenuSortArea">
+             <h2>SORT</h2>
+             <ul>
+                 <li><input type="checkbox" id="sortAlphabetically" name="sortAlphabetically" value="Alphabetically">
+                     <label for="sortAlphabetically">Alphabetically</label> 
+                </li>
+                 <li><input type="checkbox" id="myUploads" name="myUploads" value="MyUploads">
+                     <label for="myUploads">My Uploads</label>  
+                </li>
+                 <li><input type="radio" id="sortNewest" name="sortDate" value="Newest">
+                     <label for="sortNewest">Newest</label>
+                    
+                </li>
+                 <li><input type="radio" id="sortOldest" name="sortDate" value="Oldest">
+                     <label for="sortOldest">Oldest</label>    
+                </li>
+             </ul>
+
+            <h2 class="leftMenuSortAreaOptions">OPTIONS</h2>
+            <ul>
+                <li class="currentPage"><a href="../html/MusicBrowse.html">Browse Songs</a></li>
+                <li><a href="#">Upload Songs</a></li>
+                <li><a href="#">Edit Uploads</a></li>
+            </ul>
+        </div>
+           </div>
+
+
+         <div class="mainContent">
+            <div class="songWrapper">
+                <div class="playMediaWrapper">
+                    <i class="fas fa-play"></i>
+            </div>
+                <div class="songDetails">
+                    <div class="uploadDetails">
+                    <p class="uploaderName">Uploaded by: XXXXXX</p>
+                    <p class="uploadDate">Sep 26, 2019</p>
+                    <p class="addPlayListButton">Add to playlist</p>
+                    <button class="playFullButton">Play Full</button>
+                </div>
+                    <p class="songTitle">The Beatles - Here Comes The Sun</p>
+                </div>
+            </div>
+         </div>
+</body>
+
+</html>
