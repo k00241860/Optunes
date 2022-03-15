@@ -1,0 +1,689 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 14-Mar-2022, 20:38:26
+    Author     : igorh
+*/
+
+/***Home Page Styling**/
+.homePageContainer {
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-areas:
+        "l l l l l h h h h h h h" 
+        "l l l l l r r r r r r r"
+        "l l l l l r r r r r r r"
+        "l l l l l r r r r r r r"
+        "l l l l l r r r r r r r"
+        "l l l l l r r r r r r r"
+        "l l l l l r r r r r r r"
+        "l l l l l r r r r r r r"
+        "l l l l l r r r r r r r"
+        "l l l l l r r r r r r r"
+        "l l l l l r r r r r r r"
+        "l l l l l r r r r r r r";
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    grid-area: h;
+}
+
+.leftContent{
+    grid-area:l;
+    position: relative;
+}
+
+.rightContent{
+    grid-area:r;
+}
+
+.footer{
+    grid-area:f;
+    background-color: rgb(36, 36, 36);
+}
+
+li, a, button, h1, h2{
+    font-family: "Trebuchet", sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    color:#262626;
+    text-decoration: none;
+}
+.header{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px 4%;
+}
+.logo {
+    height: 55px;
+    width: 130px;
+    position: absolute;
+    margin: 25px;
+}
+
+.navLinks {
+    list-style: none;
+    margin-left: 100px;
+}
+
+.navLinks li {
+    display: inline-block;
+    padding: 0px 25px;
+}
+
+.currentPage a{
+    color:#FFC857;
+}
+.navLinks li a {
+    transition: all 0.3s ease 0s;
+}
+
+.navLinks li a:hover {
+    color:#FFC857;
+}
+
+.header .profile button {
+    padding: 9px 25px;
+    background-color: #FFC857;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3 ease 0s;
+}
+
+.unLogged-login button {
+    padding: 9px 25px;
+    background-color: #262626;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3 ease 0s;
+    margin-right: -60px;
+}
+
+.unLogged-register button {
+    padding: 9px 25px;
+    background-color: #262626;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3 ease 0s;
+}
+
+.header button:hover {
+    background-color: #1f1f1f;
+}
+
+/***Right Content Styling***/
+
+.sloganSpace{
+    margin-top: 3%;
+    margin-right: 20%;
+    padding-left: 80px;
+}
+
+.sloganSpace h1 {
+    font-size: 52px;
+    font-weight: 500;
+}
+
+.sloganSpace hr{
+ width: 40%;
+ height: 0,1px;
+ margin-left: 30px;
+ background: none;
+ border-color:rgb(48, 48, 48,0.3);
+}
+
+.homepageSloganMusic{
+    margin-left: 180px;
+}
+.rightContentOptions {
+    padding-top: 5%;
+}
+
+.rightContentOptions h2 {
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.rContent{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 40px;
+}
+
+.rightContentOptions button{
+    padding: 18px 45px;
+    background-color: rgba(255,255,255,0);
+    color: #333333;
+    border: 2px solid rgba(53, 53, 53, 0.5);
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3 ease 0s;
+}
+
+.rightContentOptions button:hover {
+    border: 2px solid rgba(255, 241, 119, 0.5);
+    color: #FFC857;
+}
+
+/**Music Browser Styling**/
+.musicBrowserContainer {
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-areas:
+        "lm lm sh sh sh sh sh sh sh sh sh sh" 
+        "lm lm hs hs hs hs hs hs hs hs hs hs" 
+        "lm lm m m m m m m m m m m"
+        "lm lm m m m m m m m m m m"
+        "lm lm m m m m m m m m m m"
+        "lm lm m m m m m m m m m m"
+        "lm lm m m m m m m m m m m"
+        "lm lm m m m m m m m m m m"
+        "lm lm m m m m m m m m m m"
+        "lm lm m m m m m m m m m m"
+        "lm lm m m m m m m m m m m"
+        "lm lm m m m m m m m m m m"
+        "lm lm m m m m m m m m m m";
+}
+
+.leftMenu {
+    grid-area: lm;
+}
+
+.mainContent{
+    grid-area: m;
+}
+
+.subHeader{
+    grid-area: hs;
+}
+
+.solidHeader{
+    grid-area: sh;
+    height:90px;
+}
+.solidNavLogo{
+height: 55px;
+width: 130px;
+margin-right: 200px;
+}
+
+.solidHeader{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.solidHeader button {
+    padding: 9px 25px;
+    background-color: #FFC857;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3 ease 0s;
+}
+
+.solidHeader button:hover {
+    background-color: #1f1f1f;
+}
+
+.solidHeader .solidNavLinks{
+ justify-content: end;
+ list-style: none;
+ margin-left: 100px;
+}
+
+.solidNavLinks li a {
+    transition: all 0.3s ease 0s;
+}
+
+.solidNavLinks li a:hover {
+    color:#FFC857;
+}
+
+.solidNavLinks li {
+    display: inline-block;
+    padding: 0px 25px;
+}
+
+/*** Sub Header Styling ***/
+
+.subHeader {
+    margin-left: 100px;
+    display: flex;
+    height: 50%;
+}
+
+.subHeader h3 {
+    text-decoration: underline;
+    font-family: "Trebuchet", sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    color:#262626;
+}
+
+.subHeader a{
+    color:#FFC857;
+}
+
+.subHeader p {
+    text-decoration: underline;
+    font-family: "Trebuchet", sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    color: rgba(53, 53, 53, 0.5);
+    text-decoration: none;
+}
+
+.searchBarWrap{
+    width: 500px;
+    margin-left: 8%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 10px;
+}
+
+.searchBarWrap .searchBox {
+    position: relative;
+    width: 500px;
+    height: 60px;
+
+}
+
+.searchBarWrap .searchBox input{
+    margin-top: 1px;
+    position: absolute;
+    top: 0;
+    left: 5;
+    width: 100%;
+    height: 79%;
+    font-size: 18px;
+    border-radius: 50px;
+    border-color:rgba(32, 32, 32, 0.2);
+    
+}
+
+.searchBarWrap .searchBox .btn{
+    position: absolute;
+    border-radius: 50%;
+    left: 0;
+    width: 50px;
+    height: 80%;
+    background:#FFC857;
+    z-index: 1;
+    cursor: pointer;
+}
+
+.searchBarWrap .searchBox .btn:hover{
+    background:rgb(32, 32, 32);
+}
+
+.searchBarWrap .searchBox .btn.btn_common .fas{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color: white;
+    font-size: 20px;
+}
+
+.searchBarWrap .searchBox .input{
+padding-right: 10px;
+padding-left: 60px;
+}
+
+/*** Left Menu Styling ***/
+.leftMenu{
+    background-color: rgb(32, 32, 32);
+}
+
+.leftMenu h2 {
+    color: #FFC857;
+    font-size: 28px;
+    margin-left: -70px;
+}
+
+.leftMenuSortArea {
+    display: grid;
+    justify-content: center;
+    margin-top: 30%;
+}
+
+
+.leftMenuSortArea li{
+    list-style: none;
+    color:rgb(255, 255, 255);
+    font-weight: 400;
+    padding-top: 30px;
+}
+
+.leftMenuSortArea a{
+    list-style: none;
+    color:rgb(255, 255, 255);
+    font-weight: 400;
+    padding-top: 30px;
+    transition: all 0.3s ease 0s;
+}
+
+.leftMenuSortArea a:hover {
+    color:#FFC857;
+}
+
+.leftMenuSortAreaOptions{
+    margin-top: 100px;
+}
+
+.leftMenu .currentPage a{
+    color:#FFC857;
+}
+
+/*** Main Content Styling ***/
+
+.songWrapper {
+    position: relative;
+    background-color: #262626;
+    width: 760px;
+    height: 120px;
+    border-radius: 10px;
+    margin-left: 100px;
+}
+
+.songWrapper .playMediaWrapper {
+    position: absolute;
+    background-color: white;
+    width: 90px;
+    height: 90px;
+    top: 50%;
+    left: 9%;
+    border-radius: 5px;
+    transform: translate(-50%,-50%);
+
+}
+
+.songWrapper .playMediaWrapper .fas{
+border: 0;
+color:rgb(32, 32, 32);
+font-size: 80px;
+cursor: pointer;
+position: relative; 
+left: 50%;
+top: 5%;
+transform: translateX(-50%);
+}
+
+.songDetails {
+    margin-left: 17%;
+    color: #FFFFFF;
+}
+.uploadDetails {
+    display: flex;
+    align-items: center;
+    padding: 10px 0px;
+}
+
+.uploadDetails .uploadDate{
+    padding-left: 10px;
+    font-size: 14px;
+}
+
+.songTitle{
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.playFullButton{
+    display: flex;
+    padding: 8px 25px;
+    background-color:#FFC857;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3 ease 0s;
+    margin-left: 5%;
+    margin-right: 15px;
+}
+
+.playFullButton:hover{
+    background-color:#77d87f;
+}
+
+.addPlayListButton {
+    color:#FFC857;
+    font-size: 18px;
+    margin-left: auto;
+
+}
+
+/***Login Page Styling ***/
+.loginPageContainer {
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-areas:
+        "sh sh sh sh sh sh sh sh sh sh sh sh" 
+        "hs hs hs hs hs hs hs hs hs hs hs hs" 
+        "m m m m m m m m m m m m"
+        "m m m m m m m m m m m m"
+        "m m m m m m m m m m m m"
+        "m m m m m m m m m m m m"
+        "m m m m m m m m m m m m"
+        "m m m m m m m m m m m m"
+        "m m m m m m m m m m m m"
+        "m m m m m m m m m m m m"
+        "m m m m m m m m m m m m"
+        "m m m m m m m m m m m m"
+        "m m m m m m m m m m m m";
+}
+
+.loginPageContainer .mainContent{
+    grid-area: m;
+}
+
+.loginPageContainer .subHeader{
+    grid-area: hs;
+}
+
+.loginPageContainer .solidHeader{
+    grid-area: sh;
+    height:90px;
+}
+
+.loginPageContainer .mainContent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loginPageContainer .mainContent .accountDetailsWrapper {
+    height: 700px;
+    width: 1435px;
+    border-radius: 30px;
+    box-shadow: 3px 3px 10px rgb(92, 92, 92);
+    display: flex;
+    justify-content: space-around;
+}
+
+.accountDetailsWrapper .leftAccountSection {
+    height: 100%;
+    width: 100%;
+    background-image: url(images/accountDetailsBackground.jpg);
+    background-size: cover;
+    border-radius: 30px 0px 0px 30px;
+    text-align: center;
+}
+
+.accountDetailsWrapper .rightAccountSection {
+    height: 100%;
+    width: 100%;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+.accountTitle h1{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10%;
+    font-size: 36px;
+}
+
+.accountForm .inputField input {
+    margin-bottom: 30px;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    width: 300px;
+    height: 30px;
+    padding-left: 10px;
+    border-radius: 10px;
+    font-weight: 600;
+    border: 1px solid rgb(173, 173, 173);
+}
+
+.accountForm label {
+    font-size: 12px;
+    color:rgba(92, 92, 92,0.8);
+    margin-left: 10px; 
+    font-weight: 600;
+}
+
+.accountForm .loginBtn{
+    padding: 9px 25px;
+    background-color:#FFC857;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: all 0.3 ease 0s;
+    font-size: 12px;
+    font-weight: bold;
+    margin-left: 10px;
+}
+
+.accountForm .registerBtn {
+    padding: 9px 25px;
+    background-color:#FFC857;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: all 0.3 ease 0s;
+    font-size: 12px;
+    font-weight: bold;
+    margin-left: 10px;
+}
+
+.accountForm .backBtn:hover, .registerBtn:hover {
+    background-color: #3dc776;;
+}
+
+.accountForm .backBtn {
+    padding: 9px 25px;
+    background-color: #313131;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: all 0.3 ease 0s;
+    font-size: 12px;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.accountForm .loginBtn:hover {
+    background-color: #3dc776;
+}
+
+.account_Btns{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 40px;
+}
+
+.accountForm .account_Btns input{
+    padding: 10px 50px 10px 50px;
+}
+
+/***Upload Music Page***/
+
+.accountForm .uploadBtn {
+    padding: 9px 25px;
+    background-color: #313131;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: all 0.3 ease 0s;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.accountForm .uploadBtn:hover {
+    background-color: #3dc776;
+}
+
+.uploadWrapper .leftUploadSection {
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    border-radius: 30px 0px 0px 30px;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+.uploadWrapper {
+    height: 700px;
+    width: 1435px;
+    border-radius: 30px;
+    box-shadow: 3px 3px 10px rgb(92, 92, 92);
+    display: flex;
+    justify-content: space-around;
+}
+
+.uploadIcon{
+    height: 412px;
+    width: 412px;
+}
+
+.rightUploadSection{
+    background-color: aliceblue;
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+    display: grid;
+    align-items: center;
+}
+
+.upload-file-span{
+    color:#FFC857;
+    font-size: 46px;
+    font-weight: 400;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -200px;
+}
