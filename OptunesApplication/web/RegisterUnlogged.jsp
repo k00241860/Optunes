@@ -38,36 +38,34 @@
                     <div class="leftAccountSection">
                     </div>
                     <div class="rightAccountSection">
-                        <div class="accountForm">
-                            <form action="UserServlet" method="post" enctype="multipart/form-data">
-                                <input type="hidden" name="action" value="addUser">
 
-                                <table cellpadding=0 cellspacing=10>
+                        <form action="UserServlet" method="post">
+                            <input type="hidden" name="action" value="addUser">
+                            <div class="accountForm">
 
-                                    <div class="accountTitle"><h1>REGISTER</h1></div>
-                                    <div class="inputField">
-                                        <tr><td><span>Username</span><input type="text" class="input" id="user" name="user"></td></tr>
-                                    </div>
-                                    <div class="inputField">
-                                        <tr><td><span>Email</span><input type="text" class="input" id="email" name="email"></td></tr>
-                                    </div>
-                                    <div class="inputField">
-                                        <tr><td><span>Password</span><input type="password" class="input" id="password" name="password"></td></tr>
-                                    </div>
-                                    <div class="inputField">
-                                        <tr><td> <span>Repeat Password</span><input type="password" class="input"></td></tr>
-                                    </div>
-                                    <div class="account_Btns">
-                                        <input type="submit" value="Back" class="backBtn">
-                                        <input type="submit" value="Register" class="registerBtn">
-                                    </div>
-                                    </div>
+                                <div class="accountTitle"><h1>REGISTER</h1></div>
+                                <div class="inputField">
+                                    <label>Username</label>
+                                    <input type="text" name="username" class="input">
+                                </div>
+                                <div class="inputField">
+                                    <label>Email</label>
+                                    <input type="text" name="email" class="input">
+                                </div>
+                                <div class="inputField">
+                                    <label>Password</label>
+                                    <input type="password" name="password" class="input">
+                                </div>
+                                <div class="account_Btns">
+                                    <button  value="Register" class="registerBtn">Register</button
+                                </div>
+                    </div>
+                </div>
+                    </form>
+            </div>
+                
+        </div>
+    </div>
+</body>
 
-
-                                    </div>
-                                    </div>
-                                    </div>
-                                    </div>
-                                    </body>
-
-                                    </html>
+</html>

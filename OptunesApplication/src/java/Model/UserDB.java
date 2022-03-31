@@ -125,13 +125,11 @@ public class UserDB {
         System.out.println("in model adding user");
         if (c != null) {
             try {
+                
                 PreparedStatement inserter = c.prepareStatement(template);
                 inserter.setString(1, this.username);
                 inserter.setString(2, this.password);
                 inserter.setString(3, this.email);
-
-
-
                 int i = inserter.executeUpdate();
                 return true;
             } catch (SQLException ex) {
@@ -142,4 +140,7 @@ public class UserDB {
         }
         return true;
     }
+    
+    
 }
+

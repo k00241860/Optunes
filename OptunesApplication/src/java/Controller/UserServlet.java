@@ -5,12 +5,20 @@
  */
 package Controller;
 
+import Model.User;
+import Model.UserDB;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.text.ParseException;
+import java.util.ArrayList;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 /**
  *
@@ -28,20 +36,43 @@ public class UserServlet extends HttpServlet {
      * @throws IOException if an I/O error occurs
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
-        response.setContentType("text/html;charset=UTF-8");
-        try (PrintWriter out = response.getWriter()) {
-            /* TODO output your page here. You may use following sample code. */
-            out.println("<!DOCTYPE html>");
-            out.println("<html>");
-            out.println("<head>");
-            out.println("<title>Servlet UserServlet</title>");            
-            out.println("</head>");
-            out.println("<body>");
-            out.println("<h1>Servlet UserServlet at " + request.getContextPath() + "</h1>");
-            out.println("</body>");
-            out.println("</html>");
+            throws ServletException, IOException, NumberFormatException, ParseException {
+        //coding here 
+        String action = request.getParameter("action");
+        System.out.println("action = " + action);
+        HttpSession session = request.getSession();
+
+        String nextPage = "";
+        switch (action) {
+            case "processRequestDisplayHomePage":
+                nextPage = "/UnloggedHomePage.jsp";
+                break;
+            case "addUser":
+                nextPage = processAddUser(request, session, nextPage);
+                break;
+            default:
         }
+        gotoPage(nextPage, request, response);
+    }
+
+    private String processAddUser(HttpServletRequest request, HttpSession session, String nextPage) throws NumberFormatException, ParseException {
+        //debud info
+        System.out.println("In processAddUser");
+
+        String username = request.getParameter("username");
+        String password = request.getParameter("password");
+        String email = request.getParameter("email");
+
+        User u = new User(username, password, email);
+
+        if (u.addUser()) {
+            //send the user a message to say it was added-> view
+            String message = "User was registered to the system.";
+            request.setAttribute("message", message);
+            //take user to homepage
+            nextPage = "/UnloggedHomePage.jsp";
+        }
+        return nextPage;
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
@@ -56,7 +87,13 @@ public class UserServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        processRequest(request, response);
+        try {
+            processRequest(request, response);
+        } catch (NumberFormatException ex) {
+            Logger.getLogger(UserServlet.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (ParseException ex) {
+            Logger.getLogger(UserServlet.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
 
     /**
@@ -70,7 +107,13 @@ public class UserServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        processRequest(request, response);
+        try {
+            processRequest(request, response);
+        } catch (NumberFormatException ex) {
+            Logger.getLogger(UserServlet.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (ParseException ex) {
+            Logger.getLogger(UserServlet.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
 
     /**
@@ -83,4 +126,10 @@ public class UserServlet extends HttpServlet {
         return "Short description";
     }// </editor-fold>
 
+    private void gotoPage(String url, HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+        RequestDispatcher dispatcher
+                = getServletContext().getRequestDispatcher(url);
+        dispatcher.forward(request, response);
+    }
 }

@@ -76,7 +76,7 @@ public class User {
 
     }
         
-            public ArrayList<User> searchGalleryPieces(String findUser) {
+            public ArrayList<User> searchUsers(String findUser) {
 
         UserDB userdb = new UserDB();
         return userdb.searchUsers(findUser);
