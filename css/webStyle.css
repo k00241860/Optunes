@@ -3,6 +3,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    font-family: "Poppins", sans-serif;
 }
 /*** Scrollbar syling***/
 
@@ -25,7 +26,6 @@
 
 /*** Header Styling ***/
 li, a, button, h2, h1, h3, h4, span{
-    font-family: "Poppins", sans-serif;
     font-weight: 500;
     font-size: 16px;
     color: white;
@@ -82,7 +82,6 @@ nav {
     padding: 9px 25px;
     cursor: pointer;
     transition: all 0.3s ease 0s;
-    font-weight: 700;
     font-weight: 700;
 }
 
@@ -278,14 +277,12 @@ margin: 20px 10px 6px 10px;
     }
 
 .leftMenuTitle{
-font-family: "Poppins", sans-serif;
 font-weight: 500;
 font-size: 16px;
 padding-left: 10px;
 }
 
 .leftMenuContent a{
-    font-family: "Poppins", sans-serif;
     font-weight: 400;
     font-size: 14px;
     padding-left: 15px;
@@ -326,7 +323,6 @@ top: 0;
 left: 5;
 width: 100%;
 height: 79%;
-font-family: "Poppins", sans-serif;
 font-weight: 500;
 font-size: 18px;
 color:aliceblue;
@@ -376,7 +372,6 @@ display: flex;
 }
 
 .uploaderName, .uploadDate, .songTitle{
-    font-family: "Poppins", sans-serif;
     font-weight: 500;
     font-size: 16px;
     margin-left: 20px;
@@ -426,3 +421,99 @@ color: rgb(187, 187, 187)
 font-size: 21px;
 color: #FFFFFF;
 }
+
+/*** Upload Page ***/
+
+.uploadWrapper .leftUploadSection {
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    border-radius: 30px 0px 0px 30px;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    margin-left: 200px;
+}
+
+.uploadWrapper {
+    height: 700px;
+    width: 1435px;
+    border-radius: 30px;
+    display: flex;
+    justify-content: space-around;
+    margin: 100px 0px 0px 100px;
+}
+
+.uploadIcon{
+    height: 312px;
+    width: 312px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.rightUploadSection{
+    background: none;
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+    display: grid;
+    align-items: center;
+    margin-right: 200px;
+}
+
+.upload-file-span{
+    color:#FFC857;
+    font-size: 36px;
+    font-weight: 400;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -350px;
+}
+
+.songForm{
+    margin-bottom: 100px;
+}
+
+.songForm .inputField input {
+    margin-bottom: 30px;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    width: 300px;
+    height: 30px;
+    padding-left: 10px;
+    border-radius: 10px;
+    font-weight: 600;
+    border: 1px solid rgb(173, 173, 173);
+}
+
+.songForm .inputField label{
+    color: white;
+}
+.account_Btns{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 40px;
+}
+
+.accountForm .account_Btns input{
+    padding: 10px 50px 10px 50px;
+}
+
+.uploadBtn:hover{
+    background-color: #FFC857;
+    color: #100F0D;
+}
+
+.uploadBtn{
+    background: none;
+    border: solid rgba(255, 200, 87,1) 1px;
+    padding: 9px 25px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+    font-weight: 700;
+    color:#FFFFFF
+}
+
