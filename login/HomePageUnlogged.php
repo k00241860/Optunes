@@ -1,3 +1,11 @@
+<?php
+session_start();
+
+include("connection.php");
+include("functions.php");
+$user_data = check_login($con);
+
+?>
 <!DOCTYPE html>
 
 <html>
@@ -7,22 +15,22 @@
         <title>OPTUNES</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="../css/webStyle.css">
+        <link rel="stylesheet" href="css/webStyle.css">
 
     </head>
     <body>
         <header>
-            <img class="logo" href="./HomePage.html" src="../Images/OptunesLogo.png">
+            <img class="logo" href="HomePage.php" src="Images/OptunesLogo.png">
             <nav>
                 <ul class="navLinks">
-                    <li><a href="./HomePage.html" class="currentPage">HOME</a></li>
-                    <li><a href="./MusicBrowse.html">MUSIC</a></li>
-                    <li><a href="./AboutPage.html">ABOUT</a></li>
+                    <li><a href="HomePageUnlogged.php" class="currentPage">HOME</a></li>
+                    <li><a href="MusicBrowseUnlogged.php">MUSIC</a></li>
+                    <li><a href="AboutPageUnlogged.php">ABOUT</a></li>
                 </ul>
             </nav>
             <div class="accountOptions">
-            <a class="loginLink" href="./LoginPage.html"><button>LOG IN</button></a>
-            <a class="signUpLink" href="./RegisterPage.html"><button>SIGN UP</button></a>
+            <a class="loginLink" href="LoginPage.php"><button>LOG IN</button></a>
+            <a class="signUpLink" href="RegisterPage.php"><button>SIGN UP</button></a>
             </div>
         </header>
 
@@ -44,7 +52,7 @@
                     
                     <br><br>Share your favourite animated song with others using the sharing feature, spread the word<br>
                     and bring the entertainment to others!</span>
-                    <a class="advSpaceButton" href="#"><button>SIGN UP</button></a>
+                    <a class="advSpaceButton" href="RegisterPage.php"><button>SIGN UP</button></a>
             </div>
         </div>
             <div class="rightContent">

@@ -290,6 +290,10 @@ padding-left: 10px;
     transition: all 0.3s ease 0s;
 }
 
+.leftMenuContent .unavailableOption{
+    color:rgba(179, 179, 179, 0.4);
+}
+
 .leftMenuContent .currentLeftMenuPage{
     color: #FFC857;
     font-weight: 500;
@@ -297,6 +301,10 @@ padding-left: 10px;
 
 .leftMenuContent a:hover {
     color: #FFC857;
+}
+
+.leftMenuContent .unavailableOption:hover {
+    color:rgba(179, 179, 179, 0.1);
 }
 
 .searchBarWrap{

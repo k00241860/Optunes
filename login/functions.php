@@ -13,9 +13,6 @@ function check_login($con){
             return $user_data;
         }
     }
-    //redirect to login
-    header("Location: LoginPage.php");
-    die;
 }
 
 function random_num($length){

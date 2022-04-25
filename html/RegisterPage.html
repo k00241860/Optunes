@@ -1,32 +1,33 @@
+<!DOCTYPE html>
+
 <html>
-<head>
-<title>
-OPTUNES Music Page Prototype
-</title>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>OPTUNES</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="../css/webStyle.css">
 
-<link rel="stylesheet" href="../css/style.css">
-<script src="https://kit.fontawesome.com/85b3032907.js" crossorigin="anonymous"></script>
-</head>
-<body>
-<div class="loginPageContainer">
-        <div class="solidHeader">
-            <img class="solidNavLogo" href="../html/HomePage.html" src="../Images/OptunesLogo.png">
-        <div class="solidNavigation">
-            <ul class="solidNavLinks">
-                 <li><a href="../html/UnloggedHomePage.html">Home</a></li>
-                 <li class="currentPage"><a href="../html/UnloggedMusicBrowse.html">Music</a></li>
-                 <li><a href="#">Play List</a></li>
-                 <li><a href="#">About</a></li>
-                 
-            </ul>
-                </div>
-                <a class="unLogged-login" href="../html/LoginPage.html"><button>Login</button></a>
-                <a class="unLogged-register" href="../html/RegisterPage.html"><button>Register</button></a>
-        </div>
+    </head>
+    <body>
+        <header>
+            <img class="logo" href="./HomePage.html" src="../Images/OptunesLogo.png">
+            <nav>
+                <ul class="navLinks">
+                    <li><a href="./HomePage.html" class="currentPage">HOME</a></li>
+                    <li><a href="./MusicBrowse.html">MUSIC</a></li>
+                    <li><a href="./AboutPage.html">ABOUT</a></li>
+                </ul>
+            </nav>
+            <div class="accountOptions">
+            <a class="loginLink" href="./LoginPage.html"><button>LOG IN</button></a>
+            <a class="signUpLink" href="./RegisterPage.html"><button>SIGN UP</button></a>
+            </div>
+        </header>
 
-
-         <div class="mainContent">
-             <div class="accountDetailsWrapper">
+        <div class="mainNoBackgroundAccount">
+            <div class="accountDetailsWrapper">
                 <div class="leftAccountSection">
                 </div>
                 <div class="rightAccountSection">
@@ -37,28 +38,19 @@ OPTUNES Music Page Prototype
                             <input type="text" class="input">
                         </div>
                         <div class="inputField">
-                            <label>Email</label>
-                            <input type="text" class="input">
-                        </div>
-                        <div class="inputField">
                             <label>Password</label>
                             <input type="password" class="input">
                         </div>
-                        <div class="inputField">
-                            <label>Repeat Password</label>
-                            <input type="password" class="input">
-                        </div>
                         <div class="account_Btns">
-                            <input type="submit" value="Back" class="backBtn">
-                            <input type="submit" value="Register" class="registerBtn">
+                            <input type="submit" value="Cancel" class="cancelBtn">
+                            <input type="submit" value="Register" class="registerLink">
                         </div>
                     </div>
 
                     
                 </div>
              </div>
-            </div>
-         </div>
-</body>
-
+        </div>
+        
+    </body>
 </html>

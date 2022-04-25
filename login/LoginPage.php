@@ -41,40 +41,41 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
 
 ?>
 
+<!DOCTYPE html>
+
 <html>
-<head>
-<title>
-OPTUNES Music Page Prototype
-</title>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>OPTUNES</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="css/webStyle.css">
 
-<link rel="stylesheet" href="css/style.css">
-<script src="https://kit.fontawesome.com/85b3032907.js" crossorigin="anonymous"></script>
-</head>
-<body>
-<div class="loginPageContainer">
-        <div class="solidHeader">
-            <img class="solidNavLogo" href="HomePage.php" src="Images/OptunesLogo.png">
-        <div class="solidNavigation">
-            <ul class="solidNavLinks">
-                 <li><a href="HomePage.php">Home</a></li>
-                 <li class="currentPage"><a href="html/UnloggedMusicBrowse.html">Music</a></li>
-                 <li><a href="#">Play List</a></li>
-                 <li><a href="#">About</a></li>
-                 
-            </ul>
-                </div>
-                <a class="unLogged-login" href="LoginPage.php"><button>Login</button></a>
-                <a class="unLogged-register" href="RegisterPage.php"><button>Register</button></a>
-        </div>
+    </head>
+    <body>
+        <header>
+            <img class="logo" href="HomePage.php" src="Images/OptunesLogo.png">
+            <nav>
+                <ul class="navLinks">
+                    <li><a href="HomePageUnlogged.php" class="currentPage">HOME</a></li>
+                    <li><a href="MusicBrowseUnlogged.php">MUSIC</a></li>
+                    <li><a href="AboutPageUnlogged.php">ABOUT</a></li>
+                </ul>
+            </nav>
+            <div class="accountOptions">
+            <a class="loginLink" href="LoginPage.php"><button>LOG IN</button></a>
+            <a class="signUpLink" href="RegisterPage.php"><button>SIGN UP</button></a>
+            </div>
+        </header>
 
-
-         <div class="mainContent">
-             <div class="accountDetailsWrapper">
+        <div class="mainNoBackgroundAccount">
+            <div class="accountDetailsWrapper">
                 <div class="leftAccountSection">
                 </div>
                 <div class="rightAccountSection">
                     <div class="accountForm">
-                        <form method="post">
+                    <form method="post">
                         <div class="accountTitle"><h1>LOGIN</h1></div>
                         <div class="inputField">
                             <label>Username</label>
@@ -85,8 +86,8 @@ OPTUNES Music Page Prototype
                             <input type="password" class="input" name="password">
                         </div>
                         <div class="account_Btns">
-                            <input type="submit" value="Back" class="backBtn">
-                            <input type="submit" value="Login" class="loginBtn">
+                            <input type="submit" value="Cancel" class="cancelBtn">
+                            <input type="submit" value="Login" class="loginLink">
                         </div>
                         </form>
                     </div>
@@ -94,8 +95,7 @@ OPTUNES Music Page Prototype
                     
                 </div>
              </div>
-            </div>
-         </div>
-</body>
-
+        </div>
+        
+    </body>
 </html>
